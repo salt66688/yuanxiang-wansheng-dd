@@ -104,8 +104,6 @@ def structured_data(seo, page_name, today):
         "name": seo["title"],
         "description": seo["desc"],
         "inLanguage": "zh-CN",
-        "datePublished": today,
-        "dateModified": today,
         "url": seo["url"],
         "mainEntityOfPage": {"@type": "WebPage", "@id": seo["url"]},
         "isAccessibleForFree": True,
@@ -193,7 +191,7 @@ def build():
         encoding="utf-8",
     )
     urls = "".join(
-        f"  <url><loc>{v['url']}</loc><lastmod>{today}</lastmod>"
+        f"  <url><loc>{v['url']}</loc>"
         f"<changefreq>weekly</changefreq><priority>{'1.0' if k == 'index.html' else '0.9'}</priority></url>\n"
         for k, v in SEO.items()
     )
