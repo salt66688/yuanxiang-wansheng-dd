@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salt66688.github.io/yuanxiang-wansheng-dd/sitemap.xml
